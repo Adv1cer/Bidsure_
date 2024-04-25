@@ -1,0 +1,302 @@
+<% content_for :title, "BID SURE | Auction" %>
+
+<div class="py-4">
+ <%# <h2 class="text-sm font-light" id ="backBtn"> < back to previous page </h2>
+ <a href="#" class="text-sm font-light">home</a> %>
+<%= link_to "< back to previous page", root_path, class: "text-sm font-light" %>
+</div>
+
+<div class="flex py-2 gap-5">
+  <div class="grid grid-rows-4 gap-2">
+        <%= link_to "product" do %>
+          <%= image_tag("dd.png", :alt => "", :width => "100", :height => "100" ,:class => "rounded-xl shadow-lg") %>
+        <% end %>
+        <img class="rounded-xl" src="https://dummyimage.com/100x100" >
+        <img class="rounded-xl" src="https://dummyimage.com/100x100" >
+        <img class="rounded-xl" src="https://dummyimage.com/100x100" >
+    </div>
+     <div class="grid gap-2">
+     <%# <img class="rounded-xl" src="https://dummyimage.com/630x525" > %>
+     <%= link_to "product" do %>
+          <%= image_tag("ee.png", :alt => "", :width => "630", :height => "525" ,:class => "rounded-xl shadow-lg") %>
+        <% end %>
+    </div>
+    <div class="flex flex-col gap-4">
+        
+        <div class="font-semibold"> 
+          <h1>Contrary to popular belief, Lorem Ipsum is not simply random text. 
+            <br>It has roots in a piece of classical Latin literature from 45 BC</h1>
+        </div>
+        
+        <div> 
+          <%= image_tag("qq.png", :alt => "", :width => "640", :height => "88" ,:class => "rounded-xl shadow-lg") %>
+        </div>
+        
+        <div> 
+            
+            <div class="flex gap-3">
+              
+              <div class="font-bold">
+                <h1> THB 2,800 </h1> 
+              </div>
+              
+              <div class="font-bold text-zinc-400 line-through">
+                <h1> THB 3,800 </h1>
+              </div>  
+
+
+
+            </div>
+            
+            <div class="font-light text-red-600">
+              <h3> SAVE -18% </h3>
+            </div>
+            
+            <div class="flex justify-between gap-10">
+              <div class="text-2xl font-bold">
+                <h3> BID 2,300 </h3>
+              </div>
+
+              <div class="text-2xl font-bold text-red-600">
+                <h3> 1 DAY 12 : 12 : 12 </h3>
+              </div>
+            </div>
+        
+        </div>
+        
+        <div class="grid grid-rows-4 gap-2"> 
+           <button type="button" class="block w-full bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 " id="bid_now" >
+            Bid Now
+            </button>
+            <button type="button" class="block w-full bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 " id="buy_now">
+            Buy Now
+            </button>
+            <button type="button" class="block w-full bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 " id="make_offer">
+            Make Offer
+            </button>
+        </div>
+
+      </div>
+   </div>
+
+   <div class="py-8 mb-8">  
+    <h2 class="text-2xl font-bold py-4">Explore related items</h2>
+    <div class="flex justify-center">
+      <div class="flex gap-x-4">
+        <%= link_to "product" do %>
+          <%= image_tag("sssa.png", :alt => "", :width => "320", :height => "380" ,:class => "rounded-xl shadow-lg") %>
+        <% end %>
+        <%= link_to "product" do %>
+          <%= image_tag("sssa.png", :alt => "", :width => "320", :height => "380" ,:class => "rounded-xl shadow-lg") %>
+        <% end %>
+        <%= link_to "product" do %>
+          <%= image_tag("sssa.png", :alt => "", :width => "320", :height => "380" ,:class => "rounded-xl shadow-lg") %>
+        <% end %>
+        <%= link_to "product" do %>
+          <%= image_tag("sssa.png", :alt => "", :width => "320", :height => "380" ,:class => "rounded-xl shadow-lg") %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+
+<div class ="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen flex justify-center item-center hidden" id="popup">
+  <div class ="bg-white rounded shadow-md mt-56 p-8 w-[30%] h-[60%] ">
+
+    <div>
+        <div class="flex justify-between gap-10">
+            <div class="text-2xl font-bold py-4">
+                <h2> Place Your Bid </h2>
+            </div>
+
+            <div class="text-2xl font-normal py-4">
+        <div id = "close"> X </div>
+      </div>
+    </div>
+  </div>
+     
+     <div class="flex justify-between gap-10">
+        <div class="text-xl font-normal">
+            <h3> BID 2,300 </h3>
+          </div>
+
+        <div class="text-xl font-bold text-red-600">
+            <h3> 1 DAY 12 : 12 : 12 </h3>
+          </div>
+    </div>
+
+    <div class="flex justify-between py-2 gap-5 item-align-center">
+            <button type="button" class="block w-40 bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 ">100 THB</button>
+            <button type="button" class="block w-40 bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 ">200 THB</button> 
+            <button type="button" class="block w-40 bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 ">500 THB</button> 
+    </div>
+    
+    <hr class="my-5" style="border:1px solid #787878">
+    
+    <h2> Your Max bid </h2>
+    
+    <div class="flex gap-x-4">
+        <input type="text" name="product_name" id="product_name" class="block w-80 rounded-xl border-0 py-2 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="THB">
+        <button type="button" class="block w-40 bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500" id="confirm">Confirm</button> 
+    </div>
+
+    </div>
+
+    </div>
+
+</div>
+
+
+<div class ="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen flex justify-center item-center hidden" id="popup_buyer">
+    <div class ="bg-white rounded shadow-md mt-56 p-8 w-[30%] h-[60%] ">
+        
+      <div>
+        <div class="flex justify-between gap-10">
+            <div class="text-2xl font-bold py-4">
+                <h2> Buy Now </h2>
+            </div>
+
+            <div class="text-2xl font-normal py-4">
+        <div id = "close1"> X </div>
+      </div>
+    </div>
+   </div> 
+
+    <div class="flex flex-col-2 gap-4">
+        
+        <div> 
+          <%= image_tag("dd.png", :alt => "", :width => "200", :height => "200" ,:class => "rounded-xl shadow-lg") %>
+        </div>
+        
+        <div class="flex flex-col gap-4">
+          <div class="font-semibold"> 
+            <h1> Contrary to popular belief, Lorem Ipsum is not simply random text..... </h1>
+          </div>  
+     
+        
+        <div> 
+            
+            <div class="flex gap-3">
+              
+              <div class="font-bold">
+                <h1> THB 2,800 </h1> 
+              </div>
+              
+              <div class="font-bold text-zinc-400 line-through">
+                <h1> THB 3,800 </h1>
+              </div>  
+
+            </div>
+            <div class="font-light text-red-600">
+              <h3> SAVE -18% </h3>
+            </div>
+         </div> 
+        </div> 
+      </div>
+        
+        <div class="py-5"> 
+          <button type="button" class="block w-full bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 " >
+            Buy
+            </button>
+          </div>
+    </div>
+</div>
+
+
+
+<div class ="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen flex justify-center item-center hidden" id="popup_makeoffer">
+    <div class ="bg-white rounded shadow-md mt-56 p-8 w-[30%] h-[60%] ">
+      
+      <div>
+        <div class="flex justify-between gap-10">
+            <div class="text-2xl font-bold py-4">
+                <h2> Make An Offer </h2>
+            </div>
+
+            <div class="text-2xl font-normal py-4">
+        <div id = "close2"> X </div>
+      </div>
+    </div>
+   </div> 
+
+
+      <div class="flex justify-center gap-4">
+        <div class="text-2xl font-normal py-4">
+          <h2>Your Offer</h2>
+        </div>
+      </div>
+      
+      <div class="flex gap-x-6">
+        <input type="text" name="product_name" id="product_name" class="block w-full rounded-xl border-0 py-2 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="THB">
+      </div>
+    
+    <hr class="my-5" style="border:1px solid #787878">
+
+    <div class="flex justify-between py-2 gap-5 item-align-center">
+            <button type="button" class="block w-40 bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 "> 2,400 THB </button>
+            <button type="button" class="block w-40 bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 "> 2,500 THB </button> 
+            <button type="button" class="block w-40 bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 "> 2,600 THB </button> 
+    </div>
+
+    <div class="py-5">
+        <input type="text" name="product_name" id="product_name" class="block w-full rounded-xl border-0 py-8 pl-3 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Message">
+    </div>
+
+     <div class="py-5"> 
+          <button type="button" class="block w-full bg-blue-600 rounded-xl px-3 py-4 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-blue-600 hover:bg-blue-500 " >
+           Continue
+            </button>
+      </div>
+
+    </div>
+</div>
+
+
+
+<script>
+        
+
+//////////////////////////////////////    Bid Now popup    ////////////////////////////////////////////////////////////
+    
+        document.getElementById("bid_now").onclick =function(){
+            const element = document.getElementById("popup");
+            element.classList.remove("hidden");
+            console.log("test_bidnow"); 
+        }
+        
+
+        document.getElementById("close").onclick =function(){
+            const element = document.getElementById("popup");
+            element.classList.add("hidden");
+            console.log("test_bidnow"); 
+        }
+
+///////////////////////////////////////////    Buy now popup   ///////////////////////////////////////////////////////
+
+        document.getElementById("buy_now").onclick =function(){
+            const element = document.getElementById("popup_buyer");
+            element.classList.remove("hidden");
+            console.log("test_buynow"); 
+        }
+
+        document.getElementById("close1").onclick =function(){
+            const element = document.getElementById("popup_buyer");
+            element.classList.add("hidden");
+            console.log("test_bidnow"); 
+        }
+
+//////////////////////////////////////    Make offer popup  /////////////////////////////////////////////////////
+
+        document.getElementById("make_offer").onclick =function(){
+            const element = document.getElementById("popup_makeoffer");
+            element.classList.remove("hidden");
+            console.log("test_make_offer"); 
+        }
+
+        document.getElementById("close2").onclick =function(){
+            const element = document.getElementById("popup_makeoffer");
+            element.classList.add("hidden");
+            console.log("test_make_offer"); 
+            }    
+    </script>
+
